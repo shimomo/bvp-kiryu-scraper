@@ -70,7 +70,7 @@ final class ScraperCoreTest extends TestCase
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage(
             "BVP\KiryuScraper\Scrapers\ForecastScraper::scrapeYesterday() - " .
-            "The specified key '.kind-shinnyu' is not found in the content of the URL: " .
+            "The specified key '.kind-comment' is not found in the content of the URL: " .
             "'http://www.kiryu-kyotei.com/modules/yosou/syussou.php?day=20240108&race=1'."
         );
 

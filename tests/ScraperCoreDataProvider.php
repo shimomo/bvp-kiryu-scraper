@@ -18,10 +18,10 @@ final class ScraperCoreDataProvider
             [
                 'arguments' => [1, '2024-01-02'],
                 'expected' => [
-                    'reporter_yesterday_course_label' => '記者予想 前日コース',
-                    'reporter_yesterday_course' => '123/456',
                     'reporter_yesterday_comment_label' => '記者予想 前日コメント',
                     'reporter_yesterday_comment' => '亀山の逃げ期待したいがやや不安が。スタート力とターンスピードでは生方と富澤で、生方が捲って富澤の捲り差し展開も。外枠勢も捌き堅実で連対要注意。',
+                    'reporter_yesterday_course_label' => '記者予想 前日コース',
+                    'reporter_yesterday_course' => '123/456',
                     'reporter_yesterday_focus_label' => '記者予想 前日フォーカス',
                     'reporter_yesterday_focus' => ['3=2', '3=1', '3=5', '3-2=1', '3-2=5', '3-1=5'],
                     'reporter_yesterday_focus_exacta_label' => '記者予想 前日フォーカス 2連単',
@@ -41,10 +41,10 @@ final class ScraperCoreDataProvider
             [
                 'arguments' => [12, '2024-01-02'],
                 'expected' => [
-                    'reporter_yesterday_course_label' => '記者予想 前日コース',
-                    'reporter_yesterday_course' => '142/356',
                     'reporter_yesterday_comment_label' => '記者予想 前日コメント',
                     'reporter_yesterday_comment' => '優出機の江口が壁役になり毒島の逃げで固いか。F持ちの久田もスタート力は有り先マイできれば連軸になりそう。関のカド一撃も要注意で優出機の土屋で高配当も。',
+                    'reporter_yesterday_course_label' => '記者予想 前日コース',
+                    'reporter_yesterday_course' => '142/356',
                     'reporter_yesterday_focus_label' => '記者予想 前日フォーカス',
                     'reporter_yesterday_focus' => ['1=2', '1=4', '1=5', '1-2=4', '1-2=5', '1-2=3'],
                     'reporter_yesterday_focus_exacta_label' => '記者予想 前日フォーカス 2連単',

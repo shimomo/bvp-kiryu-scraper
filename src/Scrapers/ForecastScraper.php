@@ -42,8 +42,8 @@ class ForecastScraper extends BaseScraper
         $crawlerUrl = sprintf($this->baseUrl, 'syussou', $date, $raceCode);
         $crawler = Scraper::getInstance()->request('GET', $crawlerUrl);
         $forecasts = Scraper::filterByKeys($crawler, [
-            '.kind-shinnyu',
             '.kind-comment',
+            '.kind-shinnyu',
             '.focus-block.left > dd',
             '.focus-block.right > dd',
         ]);
@@ -70,22 +70,22 @@ class ForecastScraper extends BaseScraper
             return substr_replace(substr_replace($focus, $separator[0], 1, 0), $separator[1], 3, 0);
         }, $trifectaFocuses, $trifectaSeparators);
 
-        $reporterYesterdayCourseLabel = '記者予想 前日コース';
         $reporterYesterdayCommentLabel = '記者予想 前日コメント';
+        $reporterYesterdayCourseLabel = '記者予想 前日コース';
         $reporterYesterdayFocusLabel = '記者予想 前日フォーカス';
         $reporterYesterdayFocusExactaLabel = '記者予想 前日フォーカス 2連単';
         $reporterYesterdayFocusTrifectaLabel = '記者予想 前日フォーカス 3連単';
 
+        $reporterYesterdayComment = Normalizer::normalize($forecasts['.kind-comment'][1]);
         $reporterYesterdayCourse = Normalizer::normalize($forecasts['.kind-shinnyu'][1]);
         $reporterYesterdayCourse = Trimmer::rtrim($reporterYesterdayCourse, 'インアウト');
-        $reporterYesterdayComment = Normalizer::normalize($forecasts['.kind-comment'][1]);
         $reporterYesterdayFocus = array_merge($reporterYesterdayFocusExacta, $reporterYesterdayFocusTrifecta);
 
         return [
-            'reporter_yesterday_course_label' => $reporterYesterdayCourseLabel,
-            'reporter_yesterday_course' => $reporterYesterdayCourse,
             'reporter_yesterday_comment_label' => $reporterYesterdayCommentLabel,
             'reporter_yesterday_comment' => $reporterYesterdayComment,
+            'reporter_yesterday_course_label' => $reporterYesterdayCourseLabel,
+            'reporter_yesterday_course' => $reporterYesterdayCourse,
             'reporter_yesterday_focus_label' => $reporterYesterdayFocusLabel,
             'reporter_yesterday_focus' => $reporterYesterdayFocus,
             'reporter_yesterday_focus_exacta_label' => $reporterYesterdayFocusExactaLabel,
