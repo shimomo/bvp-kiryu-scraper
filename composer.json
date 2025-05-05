@@ -1,18 +1,27 @@
 {
     "name": "bvp/kiryu-scraper",
     "description": "The BVP Kiryu Scraper package for Boatrace.",
+    "keywords": [
+        "boatrace",
+        "library",
+        "scraper"
+    ],
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "shimomo",
-            "email": "developer@shimomo.net"
+            "email": "bvp@shimomo.net"
         }
     ],
+    "support": {
+        "issues": "https://github.com/shimomo/bvp-kiryu-scraper/issues",
+        "source": "https://github.com/shimomo/bvp-kiryu-scraper"
+    },
     "require": {
         "php": "^8.2",
-        "bvp/scraper-core": "^4.0",
-        "bvp/trimmer": "^4.0",
+        "bvp/scraper-core": "^5.x-dev",
+        "bvp/trimmer": "^5.x-dev",
         "nesbot/carbon": "^2.63 || ^3.0"
     },
     "require-dev": {
@@ -27,5 +36,7 @@
         "psr-4": {
             "BVP\\KiryuScraper\\Tests\\": "tests/"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
