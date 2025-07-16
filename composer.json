@@ -1,4 +1,5 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "bvp/kiryu-scraper",
     "description": "The BVP Kiryu Scraper package for Boatrace.",
     "keywords": [
@@ -20,8 +21,8 @@
     },
     "require": {
         "php": "^8.2",
-        "bvp/scraper-core": "^5.x-dev",
-        "bvp/trimmer": "^5.x-dev",
+        "bvp/scraper-core": "^5.0",
+        "bvp/trimmer": "^5.0",
         "nesbot/carbon": "^2.63 || ^3.0"
     },
     "require-dev": {
