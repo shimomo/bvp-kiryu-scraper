@@ -88,10 +88,10 @@ final class ScraperTest extends TestCase
         $this->expectException(\BadMethodCallException::class);
         $this->expectExceptionMessage(
             "BVP\KiryuScraper\ScraperCore::__call() - " .
-            "Call to undefined method 'BVP\KiryuScraper\ScraperCore::invalid()'."
+            "Call to undefined method 'BVP\KiryuScraper\ScraperCore::ghost()'."
         );
 
-        Scraper::invalid(1, '2024-01-08');
+        Scraper::ghost(1, '2024-01-08');
     }
 
     /**
