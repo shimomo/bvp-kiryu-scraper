@@ -28,7 +28,7 @@ final class CommentScraperTest extends TestCase
     /**
      * @return void
      */
-    public function testThrowsExceptionWhenKeyNotFound(): void
+    public function testThrowsExceptionWhenMethodIsNotImplemented(): void
     {
         $this->expectException(\BadMethodCallException::class);
         $this->expectExceptionMessage(
